@@ -191,14 +191,15 @@ class ProjectManager:
                 }
             json.dump(projects_data, projects_file, indent=4)
 
-    def purge_data(self):
+    """def purge_data(self):
         confirmation = input("Are you sure you want to delete all data? (yes/no): ")
         if confirmation.lower() == "yes":
             self.users = {}
             self.projects = {}
             print("All data has been deleted.")
         else:
-            print("Operation canceled.")
+            print("Operation canceled.")"""
+    """manager.purge_data"""
 
 
 manager = ProjectManager()
@@ -207,7 +208,6 @@ manager.create_user("user1", "pass123")
 manager.create_project("Project 1", "admin")
 manager.create_task("Project 1", "Task 1", "Description 1", ["user1"])
 manager.save_data()
-manager.purge_data
 print("Project Title:", project.title)
 print("Project Members:", [member.username for member in project.members])
 print("Tasks in Project:")
